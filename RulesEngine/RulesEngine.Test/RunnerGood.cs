@@ -11,7 +11,7 @@ namespace RulesEngine.Test
         [Fact]
         public void Income_For_Single_TaxPayer()
         {
-            //Arrange
+            // Arrange
             TaxPayer taxPayer = new TaxPayer
             {
                 GrossIncome = 300_000,
@@ -19,10 +19,10 @@ namespace RulesEngine.Test
                 IsResidentOrCitizen = true,
             };
 
-            //Act
+            // Act
             var result = calculator.CalculateTax(taxPayer);
 
-            //Assert
+            // Assert
             Assert.Equal(78_000, result.TaxedAmount);
         }
     }

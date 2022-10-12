@@ -10,7 +10,7 @@ namespace RulesEngine.Test
         [Fact]
         public void Disable_Taxpayer_SHOULD_Pay_Zero_Percent_Tax()
         {
-            //Arrange
+            // Arrange
             var taxPayer = new TaxPayer
             {
                 TaxCitizen = true,
@@ -18,10 +18,10 @@ namespace RulesEngine.Test
             };
             var individualTaxCalculator = new TaxCalculator();
 
-            //Act
+            // Act
             var Result = individualTaxCalculator.CalculateTaxPercentage(taxPayer);
 
-            //Assert
+            // Assert
             Assert.Equal(0, Result);
         }
 
@@ -29,20 +29,20 @@ namespace RulesEngine.Test
         [Fact]
         public void None_TaxResident_SHOULD_NOT_BE_Calculated()
         {
-            //Arrange
+            // Arrange
             var taxPayer = new TaxPayer
             {
                 TaxCitizen = false
             };
             var individualTaxCalculator = new TaxCalculator();
 
-            //Act
+            // Act
             string expectedErrorMessage = "No TAX Calculation";
 
             var Exception_Result = Assert.Throws<InvalidOperationException>(() =>
             individualTaxCalculator.CalculateTaxPercentage(taxPayer));
 
-            //Assert
+            // Assert
             Assert.Equal(expectedErrorMessage, Exception_Result.Message);
         }
     }
