@@ -1,0 +1,12 @@
+﻿<<  Comosite Design Pattern  >>
+------------------------------------------------
+- Structural Design Pattern
+
+- Hierarchical representations of objects are required.
+- A single object and a group of objects should be treated in the same way.
+- The Composite pattern is used when data is organized in a tree structure (for example directories in a computer).
+
+
+- Component - interface
+- Component object - Component with children
+- Leaf object
