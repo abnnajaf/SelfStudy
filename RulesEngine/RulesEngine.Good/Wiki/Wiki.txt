@@ -1,0 +1,15 @@
+﻿<<  Rules Engine Design Pattern  >>
+------------------------------------------------
+- Behaviaral Design Pattern
+- Great Pattern for eliminating Complex Conditional Logic and Replacing it with more modular and Maintainable code
+
+- The Open/Closed Principle
+	Code should be open for extension, but closed for modification
+
+- Each rule you extract should follow Single Responsibility Principle
+- Rules are managed using an engine that chooses which rule(s) to apply
+- Rules may be ordered, aggregated, or filtered as appropriate
+
+- IRule
+- Rules - IRule
+- Rule Engine
